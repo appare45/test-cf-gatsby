@@ -28,4 +28,4 @@ jobs:
           name: Deploy to Cloudflare Pages
           conclusion: ${{ job.status }}
           output: |
-            {"summary":${{ steps.test.outputs.summary }}}
+            {"summary":${{ steps.Deploy.outputs.summary }}}
