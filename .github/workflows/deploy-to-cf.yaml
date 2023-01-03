@@ -9,11 +9,11 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{secrets.CF_TOKEN}}
     steps:
       - uses: actions/checkout@v3
-      - name: Install
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: latest
           cache: "npm"
+      - name: Install
         run: npm ci
       - name: Build
         run: npm run build
